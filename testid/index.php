@@ -63,75 +63,68 @@ class wechatCallbackapiTest
                           $contentStr="欢迎关注疏浚集团会议助手测试号[玫瑰]";
                           $resultStr = sprintf($textTpl,$fromUsername,$toUsername,$time,$msgType,$contentStr);
                         
-                         // "url":  "http://47.92.4.96:8080/example/#button"
-                         //$url = "http://www.sohu.com";
-                         //echo "<script language='javascript' type='text/javascript'>";
-                         //echo "window.location.href='$url'";
-                         //echo "</script>";
+                          //"url":  "http://47.92.4.96:8080/example/#button"
+                          //$url = "http://www.sohu.com";
+                          //echo "<script language='javascript' type='text/javascript'>";
+                          //echo "window.location.href='$url'";
+                          //echo "</script>";
                          
-                        
-
-
                           echo $resultStr;
-                         exit;
+                          exit;
+                     }
+
+                     if($form_Event=="CLICK")
+                     {
+                           $form_Eventkey = $postObj->EventKey;
+                           if($form_Eventkey == "mpGuide") 
+                           {
+                               $msgType ="text";
+                               $contentStr="欢迎点击查询";
+                               $resultStr = sprintf($textTpl,$fromUsername,$toUsername,$time,$msgType,$contentStr);
+                               echo $resultStr;
+                               exit;
+                           }
                      }
                 }
 
               if(!empty( $keyword ))  //text
                 {
-                  //$msgType = "text";
-                 // $contentStr = "欢迎使用疏浚会议助手!";
-                  //$resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);
+                  $msgType = "text";
+                  $contentStr = "欢迎使用疏浚会议助手!";
+                  $resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);
                           
 
-                  $msgType ="link";
-                  $title = "newurl";
-                  $desc  = "sohu";
-                  $url = "http://www.sohu.com";
-                  $resultStr = sprintf($urlTpl,$fromUsername,$toUsername,$time,$msgType,$title,$desc,$url);
+                  //$msgType ="link";
+                  //$title = "newurl";
+                  //$desc  = "sohu";
+                  //$url = "http://www.sohu.com";
+                  //$resultStr = sprintf($urlTpl,$fromUsername,$toUsername,$time,$msgType,$title,$desc,$url);
                   
                   echo $resultStr;
                 }
               else{                    //pictures
-                 // echo "success";
-                $picTpl = "<xml>
-               <ToUserName><![CDATA[%s]]></ToUserName>
-               <FromUserName><![CDATA[%s]]></FromUserName>
-               <CreateTime>%s</CreateTime>
-               <MsgType><![CDATA[%s]]></MsgType>
-               <Image>
-               <MediaId><![CDATA[%s]]></MediaId>
-               </Image>
-               <FuncFlag>0</FuncFlag>
-               </xml>";             
+                           // echo "success";
+                 $picTpl = "<xml>
+                           <ToUserName><![CDATA[%s]]></ToUserName>
+                           <FromUserName><![CDATA[%s]]></FromUserName>
+                           <CreateTime>%s</CreateTime>
+                           <MsgType><![CDATA[%s]]></MsgType>
+                           <Image>
+                           <MediaId><![CDATA[%s]]></MediaId>
+                           </Image>
+                           <FuncFlag>0</FuncFlag>
+                           </xml>";             
+                 
                   $mediaid = $postObj->MediaId;
                   $msgType = "image";
                   //$contentStr = "pictures!";
                   $resultStr = sprintf($picTpl, $fromUsername, $toUsername, $time, $msgType, $mediaid);
                   echo $resultStr;
             
-                    //      $msgType = "text";
-            // $url= "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wxd55f08e36f3eca55&secret=f3f2eb839f3c5850bdb03cbd74d0f967";
-        /*  $url="https://api.weixin.qq.com/cgi-bin/material/get_materialcount?access_token=RQiKGlYdJytWL1aXFVbwSo7dGxSFWMkw0sMW8Fs5lyidRLC80Uxwo7egPMpvqsqBBM89hEsI9edGMwYjfn0xytkgkdHh_OeAX3C2QJ9Sz4FOybHy-cHnbnrXF30sF4v8HKNbAIAWZC";            
-             $type = "image";
-             $offset = "0";
-             $count = "1";
-
-            $data = '{"type":"'.$type.'","offset":"'.$offset.'","count":"'.$count.'"}';
-           
-           $output = file_get_contents($url);
-           
-          // $output = $this->get_response_post($url,$data);
-                                                   // $result= $this->wxhttpsGet($url);
-             $jsoninfo =json_decode($output,true);
-             $ato = $jsoninfo["image_count"];
-             $resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $ato);
-             echo $resultStr;
-          */     
                }
            }
           else {
-             echo "";
+             echo "不支持的格式!";
           exit;
         }
     }

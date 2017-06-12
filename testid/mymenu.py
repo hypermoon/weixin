@@ -44,33 +44,33 @@ if __name__ == '__main__':
         [
             {
                 "type": "click",
-                "name": "会议助手",
+                "name": "会前签到",
                 "key":  "mpGuide"
             },
             {
-                "name": "会议管理",
+                "name": "会议资料",
                 "sub_button":
                 [
                     {
                         "type": "view",
-                        "name": "更新公告",
-                        "url":"http://www.sohu.com"
+                        "name": "信息查找",
+                        "url":"http://www.baidu.com"
                     },
                     {
                         "type": "view",
-                        "name": "接口权限说明",
+                        "name": "最新资料查看",
                         "url": "http://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1418702138&token=&lang=zh_CN"
                     },
                     {
                         "type": "view",
-                        "name": "返回测试",
-                        "url":  "http://47.92.4.96:8080/example/#button"
+                        "name": "UI界面",
+                        "url":  "http://47.92.4.96:8080/example/"
                     }
                 ]
             },
             {
                 "type": "media_id",
-                "name": "测试19",
+                "name": "会后互动",
                 "media_id":"3MMgNhMRRmRQKDg420_-BlgdIqcehxadrlzJyrw8BVA"
             }
           ]

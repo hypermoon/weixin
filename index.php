@@ -63,9 +63,6 @@ class wechatCallbackapiTest
                           $contentStr="欢迎关注anson测试号【玫瑰】[玫瑰]";
                           $resultStr = sprintf($textTpl,$fromUsername,$toUsername,$time,$msgType,$contentStr);
                   
-
-
-
                           echo $resultStr;
                           exit;
                      }
@@ -75,18 +72,18 @@ class wechatCallbackapiTest
 
               if(!empty( $keyword ))  //text
                 {
-                  //$msgType = "text";
-                 // $contentStr = "Welcome to wechat worlds!";
-                 // $resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);
+                  $msgType = "text";
+                  $contentStr = "欢迎使用anson测试号，人工智能模式开启中...";
+                  $resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);
                   
 
-                  $msgType ="link";
-                  $title = "newurl";
-                  $desc  = "sohu";
+                  //$msgType ="link";
+                  //$title = "newurl";
+                  //$desc  = "sohu";
                   //$url = "http://www.sohu.com";
-                  $url = "http://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1418702138&token=&lang=zh_CN";
-                  $msg = 6429543038687618759;
-                  $resultStr = sprintf($urlTpl,$fromUsername,$toUsername,$time,$msgType,$title,$desc,$url,$msg);
+                  //$url = "http://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1418702138&token=&lang=zh_CN";
+                  //$msg = 6429543038687618759;
+                  //$resultStr = sprintf($urlTpl,$fromUsername,$toUsername,$time,$msgType,$title,$desc,$url,$msg);
                   echo $resultStr;
                 }
               else{                    //pictures
