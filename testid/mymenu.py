@@ -43,9 +43,9 @@ if __name__ == '__main__':
         "button":
         [
             {
-                "type": "click",
+                "type": "view",
                 "name": "会前签到",
-                "key":  "mpGuide"
+                "url":  "http://47.92.4.96:8080/example/"
             },
             {
                 "name": "会议资料",
@@ -62,9 +62,9 @@ if __name__ == '__main__':
                         "url": "http://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1418702138&token=&lang=zh_CN"
                     },
                     {
-                        "type": "view",
-                        "name": "UI界面",
-                        "url":  "http://47.92.4.96:8080/example/"
+                        "type": "click",
+                        "name": "材料及PPT评分",
+                        "key":  "mpGuide"
                     }
                 ]
             },

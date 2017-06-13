@@ -79,7 +79,7 @@ class wechatCallbackapiTest
                            if($form_Eventkey == "mpGuide") 
                            {
                                $msgType ="text";
-                               $contentStr="欢迎点击查询";
+                               $contentStr="评分系统待后续开发中ing...";
                                $resultStr = sprintf($textTpl,$fromUsername,$toUsername,$time,$msgType,$contentStr);
                                echo $resultStr;
                                exit;
