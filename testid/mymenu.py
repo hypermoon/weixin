@@ -45,7 +45,7 @@ if __name__ == '__main__':
             {
                 "type": "view",
                 "name": "会前签到",
-                "url":  "http://47.92.4.96:8080/example/"
+                "url":  "http://hyperaries.com/example/meeting.html"
             },
             {
                 "name": "会议资料",
@@ -77,6 +77,7 @@ if __name__ == '__main__':
     }
     """
                        # "url": "http://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1418702138&token=&lang=zh_CN"
+                #"url":  "http://47.92.4.96:8080/example/meeting.html"
                        #"url":  "http://47.92.4.96/weixin/testid/weui/node_modules/weui/src/example/index.html"
                         #"url": "http://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1418702138&token=&lang=zh_CN"
   #  accessToken = Basic().get_access_token()
