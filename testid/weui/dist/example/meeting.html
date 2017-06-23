@@ -5,6 +5,16 @@
     <title>微信签到</title>
     <link rel="stylesheet" href="../style/weui.css"/>
     <link rel="stylesheet" href="./example.css"/>
+    <script>
+     function listok()
+     {
+          var mb = document.getElementById('mobilephone').value;
+          if(mb == 12345678)
+              window.location.href='ok.html' ;
+          else
+              window.location.href='fail.html';
+     }
+    </script>
 </head>
 <body ontouchstart>
      <div class="container" id="container">
@@ -21,20 +31,57 @@
              </br>
              </br>
              </br>
-
+           <!--
              <div class="weui-cell__bd" >
-                 <input class="weui-input" type="tel" border = "2"    pattern="[0-9]*" placeholder="输入手机号码签到"/>
+                 <input class="weui-input" id="mobilephone" type="tel" border = "2"    pattern="[0-9]*" placeholder="输入手机号码签到"/>
              </div>
              
              </br>
              </br>
 
              <div class="bd_spacing">
-                  <a href="javascript:;" class="weui-btn weui-btn_primary">确认签到</a>
+                  <a href="javascript:listok();" class="weui-btn weui-btn_primary" />确认签到</a>
              </div>
+             -->
+             <script>
+             function getvalue()
+              {
+                     var varmb = document.getElementById("mb").value;
+                      var sign = document.getElementById("sign");
+                    //     val.innerHTML = varmb.value;
+                    //    alert(varmb.value);
+                            if(varmb.length == 11)
+                            {
+                                sign.disabled=false;
+                                sign.className="weui-btn weui-btn_primary";
+                                //sign.setAttribute("className","weui-btn weui-btn_disabled"); 
+                            }
+                            else
+                            {
+                                sign.disabled=true;
+                                sign.className="weui-btn weui-btn_disabled";
+                                //sign.setAttribute("className","weui-btn weui-btn_primary"); 
+                            }
+                                
+                               
+              }
+             </script>
+
+             <form action="findindb.php" method="post">
+                <div class="weui-cell__hd"><label class="weui-label">手机号码:</label></div>
+             </br>
+                <div class="weui-cell__bd">
+                    <input class="weui-input" id="mb" onkeyup="getvalue()" maxlength=6   name="mobile" type="number" border="1" pattern="[0-9]*" placeholder="请输入手机号"/>
+                </div>
+             </br>
+             </br>
+              <input type="submit" id="sign" class="weui-btn weui-btn_disabled" value="确认签到">
+             </form>
              
        
       <!--  
+              <input type="submit" id="sign" class="weui-btn weui-btn_primary" value="确认签到">
+        <a href="javascript:;" class="weui-btn weui-btn_disabled weui-btn_default">页面次要操作 Disabled</a>
       <div class="weui-cells__title">表单</div>
         <div class="weui-cells weui-cells_form">
             <div class="weui-cell">
@@ -46,6 +93,8 @@
          </div>
        -->
 
+                  <!--<a href="javascript:listok();" class="weui-btn weui-btn_primary"  onclick="alert('it is ok')"/>确认签到</a>-->
+                  <!--<input type ="button" value="test" onclick="alert('it is a test')"/>--> 
 
         </div>
       </div>

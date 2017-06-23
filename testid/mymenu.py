@@ -45,7 +45,7 @@ if __name__ == '__main__':
             {
                 "type": "view",
                 "name": "会前签到",
-                "url":  "http://hyperaries.com/example/meeting.html"
+                "url":  "http://47.92.4.96/wechat/weixin/testid/weui/dist/example/meeting.html"
             },
             {
                 "name": "会议资料",
@@ -65,6 +65,11 @@ if __name__ == '__main__':
                         "type": "click",
                         "name": "材料及PPT评分",
                         "key":  "mpGuide"
+                    },
+                    {
+                        "type": "view",
+                        "name": "WEUI测试页面",
+                        "url":  "http://47.92.4.96:8080/example/test.html"
                     }
                 ]
             },
