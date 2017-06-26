@@ -17,22 +17,30 @@
 
 <body>
     <br/>
-         <label for="" class="weui-label">微信签到体验</label>
+         <label for="" class="weui-cells__title">微信签到体验</label>
     <br/>
     <br/>
     <p>
-         <label for="" class="weui-label">签到成功!</label>
+         <div align="center">
+         <label for="" class="weui-label"><h3>签到成功!</h3></label>
+         </div>
     <p/>
     <div class="weui-cell__hd">
+         <div class="weui-cell">
          <label for="" class="weui-label">姓名:</label>
          <label for="" class="weui-label"><?php echo $_GET["name"]; ?> </label>
-        <br/>
+         </div> 
+       <br/>
+         <div class="weui-cell">
          <label for="" class="weui-label">手机号:</label>
          <label for="" class="weui-label"><?php echo $_GET["mobile"]; ?> </label>
-        <br/>
+         </div>  
+      <br/>
+         <div class="weui-cell">
          <label for="" class="weui-label">职务:</label>
          <label for="" class="weui-label"><?php echo $_GET["title"]; ?> </label>
-        <br/>
+         </div> 
+       <br/>
     </div>
 
      <div>

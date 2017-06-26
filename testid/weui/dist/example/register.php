@@ -17,40 +17,44 @@
 <body>
     <p>
     <br/>
-         <label for="" class="weui-label">微信参会注册</label>
-    <br/>
-    <br/>
-
+         <!--<label for="" class="weui-label" align="cente">登记信息</label>-->
+         <label for="" class="weui-cells__title" align="cente">登记信息</label>
     <p/>
     <hr/>
-    <br/>
       <form action="savereg.php" method="post">
+              <div class="weui-cell">
                 <div class="weui-cell__hd"><label class="weui-label">* 姓名:</label></div>
              </br>
                 <div class="weui-cell__bd">
                     <input class="weui-input" name="name" type="text" border="1" placeholder="请输入名字"/>
                 </div>
+               </div>
              </br>
+              <div class="weui-cell">
                 <div class="weui-cell__hd"><label class="weui-label" width ="50">* 手机号码:</label></div>
              </br>
                 <div class="weui-cell__bd">
                     <input class="weui-input" name="mobile" type="number" border="1" pattern="[0-9]*" value="<?php echo $_GET['mobile']; ?>"/>
                 </div>
+               </div>
              </br>
+              <div class="weui-cell">
                 <div class="weui-cell__hd"><label class="weui-label">职务:</label></div>
              </br>
                 <div class="weui-cell__bd">
                     <input class="weui-input" name="title" type="text" border="1"  placeholder="可不填"/>
                 </div>
+                </div>
              </br>
+              <div class="weui-cell">
                 <div class="weui-cell__hd"><label class="weui-label">备注:</label></div>
              </br>
                 <div class="weui-cell__bd">
                     <input class="weui-input" name="remark" type="text" border="1"  placeholder="可不填"/>
                 </div>
+                </div>
              </br>
-             </br>
-                   <label class="wegui-label">*为必填项 </label>
+                 <div class="weui-cell__hd"> <label class="wegui-label">  *为必填项 </label></div>
              </br>
               <input type="submit" class="weui-btn weui-btn_primary" value="注册签到">
              </form>

@@ -65,18 +65,38 @@
                                 
                                
               }
+             function leavepage()
+             {
+                  WeixinJSBridge.call('closeWindow');
+                  this.window.opener=null;
+                   window.open('','_self');
+                   window.close();
+                //   return 1;
+                    //exit;
+                 //    alert("erer");
+             }
              </script>
 
              <form action="findindb.php" method="post">
+              <div class="weui-cell">
                 <div class="weui-cell__hd"><label class="weui-label">手机号码:</label></div>
-             </br>
+                </br>
                 <div class="weui-cell__bd">
                     <input class="weui-input" id="mb" onkeyup="getvalue()" maxlength=6   name="mobile" type="number" border="1" pattern="[0-9]*" placeholder="请输入手机号"/>
                 </div>
+                </div>
+                </br>
+              <div class="weui-cell">
+                <div class="weui-cell__hd"><label class="weui-label">签到码</label></div>
+                <div class="weui-cell__bd">
+                    <input class="weui-input" type="number" pattern="[0-9]*" placeholder="" value="123"/>
+                </div>
+               </div>
              </br>
-             </br>
-              <input type="submit" id="sign" class="weui-btn weui-btn_disabled" value="确认签到">
+              <input type="submit" id="sign" style="width:30%" class="weui-btn weui-btn_disabled" value="确认签到">
              </form>
+             </br>
+              <button id="leave" style="width:30%" class="weui-btn weui-btn_primary" onclick="leavepage()" >回到首页</button>
              
        
       <!--  
