@@ -80,7 +80,7 @@ class wechatCallbackapiTest
                            {
                                $msgType ="text";
                                $contentStr="评分系统待后续开发中ing...";
-                               $resultStr = sprintf($textTpl,$fromUsername,$toUsername,$time,$msgType,$contentStr);
+                               $resultStr = sprintf($textTpl,$fromUsername,$toUsername,$time,$msgType,$fromUsername);//$contentStr);
                                echo $resultStr;
                                exit;
                            }
