@@ -76,7 +76,7 @@ if __name__ == '__main__':
             {
                 "type": "media_id",
                 "name": "会后互动",
-                "media_id":"3MMgNhMRRmRQKDg420_-Bkvlc6kYNlfuKIpcV95GXyM"
+                "media_id":"3MMgNhMRRmRQKDg420_-BrUMEfJ2ku6qfnpkxzuUC-g"
             }
           ]
     }
