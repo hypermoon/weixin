@@ -51,6 +51,7 @@ class Basic:
                 
                  if line.find('accesstoken:') != -1:
                     self.__accessToken =  line.lstrip('accesstoken:')
+                    self.__accessToken =  self.__accessToken.rstrip('\r\n')
                  
                  if line.find('CreateTime:') != -1:
                     print "find createtime;"

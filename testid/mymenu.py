@@ -76,7 +76,7 @@ if __name__ == '__main__':
             {
                 "type": "media_id",
                 "name": "会后互动",
-                "media_id":"3MMgNhMRRmRQKDg420_-BlgdIqcehxadrlzJyrw8BVA"
+                "media_id":"3MMgNhMRRmRQKDg420_-Bkvlc6kYNlfuKIpcV95GXyM"
             }
           ]
     }
@@ -84,6 +84,7 @@ if __name__ == '__main__':
                        # "url": "http://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1418702138&token=&lang=zh_CN"
                 #"url":  "http://47.92.4.96:8080/example/meeting.html"
                        #"url":  "http://47.92.4.96/weixin/testid/weui/node_modules/weui/src/example/index.html"
+               # "media_id":"3MMgNhMRRmRQKDg420_-BlgdIqcehxadrlzJyrw8BVA"
                         #"url": "http://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1418702138&token=&lang=zh_CN"
   #  accessToken = Basic().get_access_token()
          #   {

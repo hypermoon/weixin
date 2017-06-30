@@ -11,12 +11,12 @@ class Material(object):
       #upload images
       def add_news(self,accessToken,filePath,mediaType,news):
           openFile = open(filePath,"rb")
-          param = {'media':openFile,'description':news}
+          #param = {'media':openFile,'description':news}
+          param = {'media':openFile}
           postData,postHeaders = poster.encode.multipart_encode(param)
           postUrl = "https://api.weixin.qq.com/cgi-bin/material/add_material?access_token=%s&type=%s" % (accessToken,mediaType)
-          #postUrl = "https://api.weixin.qq.com/cgi-bin/material/add_news?access_token=%s&type=%s" % (accessToken,mediaType)
           request = urllib2.Request(postUrl,postData,postHeaders)
-          urlResp = urllib2.urlopen(request)
+          urlResp = urllib2.urlopen(request,news)
           print urlResp.read()
 
 if __name__ == '__main__':
@@ -29,13 +29,14 @@ if __name__ == '__main__':
   
      news=(
      {
-       "video":
+       "description":
        [
-        {
-          "title":"test1",
-          "introduction":"myper",
-        }
+         {  
+          "title":"VIDEO_TITLE",
+          "introduction":"INTRODUCTION",
+         }
        ]
+        
      })
      news=json.dumps(news,ensure_ascii=False)
      myMaterial.add_news(accessToken,filePath,mediaType,news)

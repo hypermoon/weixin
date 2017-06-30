@@ -15,6 +15,7 @@ class Material(object):
           postData,postHeaders = poster.encode.multipart_encode(param)
           postUrl = "https://api.weixin.qq.com/cgi-bin/material/add_material?access_token=%s&type=%s" % (accessToken,mediaType)
           #postUrl = "https://api.weixin.qq.com/cgi-bin/material/add_news?access_token=%s&type=%s" % (accessToken,mediaType)
+          print postUrl
           request = urllib2.Request(postUrl,postData,postHeaders)
           urlResp = urllib2.urlopen(request)
           print urlResp.read()
@@ -24,7 +25,7 @@ if __name__ == '__main__':
      accessToken = Basic().get_access_token()
      print "accesstoken is :%s" % accessToken
      
-     filePath="material/glass.jpg"
+     filePath="material/guzi.jpg"
      mediaType = "image"
   
      myMaterial.add_news(accessToken,filePath,mediaType)
