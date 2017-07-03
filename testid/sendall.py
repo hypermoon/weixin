@@ -32,5 +32,6 @@ if __name__ == '__main__':
        
      })
 
+
      news=json.dumps(news,ensure_ascii=False)
      myMaterial.add_news(accessToken,news)

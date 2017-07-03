@@ -50,7 +50,8 @@ class Basic:
                  line = file_object.readline()
                 
                  if line.find('accesstoken:') != -1:
-                    self.__accessToken =  line.lstrip('accesstoken:')
+                    #self.__accessToken =  line.lstrip('accesstoken:')
+                    self.__accessToken =  line[12:]
                     self.__accessToken =  self.__accessToken.rstrip('\r\n')
                  
                  if line.find('CreateTime:') != -1:
