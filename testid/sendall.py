@@ -1,4 +1,5 @@
 #filename:media.py
+#coding=utf-8
 from basic import Basic
 import urllib2
 import json
@@ -26,7 +27,8 @@ if __name__ == '__main__':
         },
        "text":
         {
-          "content":"Test send mass message to tag people"
+          #"content":"Test send mass message to tag people"
+          "content":"群发 消息设置"
         },
         "msgtype":"text"
        
